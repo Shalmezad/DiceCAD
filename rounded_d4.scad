@@ -1,3 +1,5 @@
+//TODO: Fix units
+
 //______________________________________________
 // DIMENSIONS TO UNITS:
 //______________________________________________
@@ -35,7 +37,7 @@ module basic_d4(radius=inches(0.5), spacer=inches(0.25)){
 module fancy_quarter(number="1",
                      full_radius=inches(0.5), 
                      full_spacer=inches(0.25),
-                     rounding_radius=inches(0.05))
+                     rounding_radius=inches(0.10))
 {
     difference(){
         // DICE BODY:
@@ -75,9 +77,9 @@ module fancy_quarter(number="1",
     
         // Text
         translate([-inches(0.1),0,-inches(0.0)])
-        linear_extrude(inches(0.1), center=true)
+        linear_extrude(inches(0.12), center=true)
         rotate([180,0,-90])
-        text(number, size=4, halign="center", valign="center");
+        text(number, size=4.5, halign="center", valign="center", font="Liberation Sans:style=Bold");
     }
 }
 
